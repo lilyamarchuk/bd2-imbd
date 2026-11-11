@@ -1,0 +1,1124 @@
+{
+  "info": {
+    "name": "imdb_lab Flask API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000"
+    }
+  ],
+  "item": [
+    {
+      "name": "1. GET - вивід даних",
+      "item": [
+        {
+          "name": "Усі жанри",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/genres",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "genres"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Усі країни",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/countries",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "countries"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Усі особи",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/persons",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "persons"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Усі ролі",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/roles",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "roles"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Усі фільми",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/movies",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "movies"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Фільм №1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/movies/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Пошук фільмів за назвою",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/movies?title=Dark",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "movies"
+              ],
+              "query": [
+                {
+                  "key": "title",
+                  "value": "Dark"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Усі відгуки",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/reviews",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reviews"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Усі оцінки",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/ratings",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "ratings"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Цікаві факти",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/trivia",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "trivia"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Касові збори",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/box-office",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "box-office"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Склад (movie_cast)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/cast",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "cast"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. POST - вставка",
+      "item": [
+        {
+          "name": "Новий жанр",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/genres",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "genres"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Musical\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Нова країна",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/countries",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "countries"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Poland\",\n  \"code\": \"PL\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Нова особа",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/persons",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "persons"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"full_name\": \"Joaquin Phoenix\",\n  \"birth_date\": \"1974-10-28\",\n  \"birth_place\": \"San Juan, Puerto Rico\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Новий фільм",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/movies",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "movies"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Joker\",\n  \"original_title\": \"Joker\",\n  \"release_year\": 2019,\n  \"duration_min\": 122,\n  \"age_rating\": \"R\",\n  \"description\": \"Origin story of the Joker\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Нова оцінка",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/ratings",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "ratings"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"movie_id\": 1,\n  \"user_name\": \"postman_user\",\n  \"score\": 8.7\n}"
+            }
+          }
+        },
+        {
+          "name": "Новий відгук",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/reviews",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reviews"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"movie_id\": 1,\n  \"author_name\": \"Postman\",\n  \"review_text\": \"Great!\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Новий факт",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/trivia",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "trivia"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"movie_id\": 1,\n  \"fact_text\": \"Test fact\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Новий запис складу",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/cast",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "cast"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"movie_id\": 1,\n  \"person_id\": 7,\n  \"role_id\": 1,\n  \"character_name\": \"Cameo\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Нові збори",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/box-office",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "box-office"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"movie_id\": 14,\n  \"country_id\": 2,\n  \"amount_usd\": 100000000\n}"
+            }
+          }
+        },
+        {
+          "name": "ПОМИЛКА: неіснуючий фільм",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/ratings",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "ratings"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"movie_id\": 999,\n  \"user_name\": \"x\",\n  \"score\": 5\n}"
+            }
+          }
+        },
+        {
+          "name": "ПОМИЛКА: дубль оцінки",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/ratings",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "ratings"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"movie_id\": 1,\n  \"user_name\": \"user01\",\n  \"score\": 5\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. PUT - оновлення",
+      "item": [
+        {
+          "name": "Оновити фільм",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/movies/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "1"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"duration_min\": 150\n}"
+            }
+          }
+        },
+        {
+          "name": "Оновити жанр",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/genres/6",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "genres",
+                "6"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Horror/Mystery\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Оновити особу",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/persons/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "persons",
+                "1"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"biography\": \"Oscar-winning actor\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Оновити оцінку",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/ratings/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "ratings",
+                "1"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"score\": 9.2\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. DELETE - видалення",
+      "item": [
+        {
+          "name": "Видалити відгук",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/reviews/14",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reviews",
+                "14"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Видалити факт",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/trivia/14",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "trivia",
+                "14"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Видалити фільм (каскад)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/movies/14",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "14"
+              ]
+            }
+          }
+        },
+        {
+          "name": "ПОМИЛКА: видалити роль, що використовується (RESTRICT)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/roles/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "roles",
+                "1"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "5. M:1 - дані зі сторони зв'язку",
+      "item": [
+        {
+          "name": "Склад фільму №1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/movies/1/cast",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "1",
+                "cast"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Відгуки фільму №1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/movies/1/reviews",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "1",
+                "reviews"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Оцінки фільму №1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/movies/1/ratings",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "1",
+                "ratings"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Факти фільму №1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/movies/1/trivia",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "1",
+                "trivia"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Збори фільму №1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/movies/1/box-office",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "1",
+                "box-office"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Фільмографія особи №2 (Nolan)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/persons/2/filmography",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "persons",
+                "2",
+                "filmography"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Збори в країні №1 (США)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/countries/1/box-office",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "countries",
+                "1",
+                "box-office"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Записи складу з роллю №1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/roles/1/cast",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "roles",
+                "1",
+                "cast"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "6. M:N - стикувальні таблиці",
+      "item": [
+        {
+          "name": "Жанри фільму №1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/movies/1/genres",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "1",
+                "genres"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Фільми жанру №4 (Sci-Fi)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/genres/4/movies",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "genres",
+                "4",
+                "movies"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Країни фільму №1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/movies/1/countries",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "1",
+                "countries"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Фільми країни №2 (UK)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/countries/2/movies",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "countries",
+                "2",
+                "movies"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Додати жанр до фільму",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/movies/1/genres/7",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "1",
+                "genres",
+                "7"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Видалити жанр у фільму",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/movies/1/genres/7",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "1",
+                "genres",
+                "7"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Додати країну до фільму",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/movies/1/countries/3",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "1",
+                "countries",
+                "3"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Видалити країну у фільму",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/movies/1/countries/3",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "1",
+                "countries",
+                "3"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "7. Бізнес-логіка",
+      "item": [
+        {
+          "name": "Картка фільму",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/movies/1/details",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "1",
+                "details"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Топ-3 за оцінкою",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/movies/top?limit=3",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "top"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Середня оцінка фільму №1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/ratings/movie/1/average",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "ratings",
+                "movie",
+                "1",
+                "average"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Відгуки за період",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/reviews?from=2023-05-01&to=2023-06-30",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reviews"
+              ],
+              "query": [
+                {
+                  "key": "from",
+                  "value": "2023-05-01"
+                },
+                {
+                  "key": "to",
+                  "value": "2023-06-30"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
